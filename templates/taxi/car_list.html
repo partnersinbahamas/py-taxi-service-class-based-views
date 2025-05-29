@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      {% for car in cars %}
+      {% for car in car_list %}
         <tr>
           <th scope="row">
             <a href="{% url 'taxi:car-detail' car.id %}">
