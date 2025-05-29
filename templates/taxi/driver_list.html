@@ -16,7 +16,11 @@
     <tbody>
       {% for driver in drivers %}
         <tr>
-          <th scope="row">{{ driver.id }}</th>
+          <th scope="row">
+            <a href="{% url 'taxi:driver-detail' driver.id %}">
+              {{ driver.id }}
+            </a>
+          </th>
           <td>{{ driver.first_name }}</td>
           <td>{{ driver.last_name }}</td>
           <td>{{ driver.username }}</td>

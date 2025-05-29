@@ -14,7 +14,9 @@
 
         {% for driver in car.drivers.all %}
           <li class="list-group-item">
-            {{ driver.first_name }} {{ driver.last_name }}
+            <a href="{% url 'taxi:driver-detail' driver.id %}">
+              {{ driver.first_name }} {{ driver.last_name }}
+            </a>
           </li>
         {% endfor %}
       </ul>

@@ -38,3 +38,7 @@ class DriverListView(ListView):
     model = Driver
     context_object_name = "drivers"
     paginate_by = 5
+
+
+class DriverDetailView(DetailView):
+    model = Driver
