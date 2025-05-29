@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import index, ManufacturerListView, CarListView
+from .views import index, ManufacturerListView, CarListView, DriverListView
 
 urlpatterns = [
     path("", index, name="index"),
@@ -10,6 +10,7 @@ urlpatterns = [
         name="manufacturer-list"
     ),
     path("cars/", CarListView.as_view(), name="car-list"),
+    path("drivers/", DriverListView.as_view(), name="driver-list")
 ]
 
 app_name = "taxi"
