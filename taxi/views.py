@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from taxi.models import Driver, Car, Manufacturer
 
@@ -28,6 +28,10 @@ class CarListView(ListView):
     queryset = Car.objects.select_related("manufacturer").order_by("model")
     context_object_name = "cars"
     paginate_by = 5
+
+
+class CarDetailView(DetailView):
+    model = Car
 
 
 class DriverListView(ListView):

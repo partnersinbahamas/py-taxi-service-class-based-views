@@ -13,7 +13,11 @@
     <tbody>
       {% for car in cars %}
         <tr>
-          <th scope="row">{{ car.id }}</th>
+          <th scope="row">
+            <a href="{% url 'taxi:car-detail' car.id %}">
+              {{ car.id }}
+            </a>
+          </th>
           <td>{{ car.model }}</td>
           <td>{{ car.manufacturer.name }}</td>
         </tr>
